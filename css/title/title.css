@@ -1,0 +1,121 @@
+
+.title__div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:var(--cor-de-encabezado-o-pie);
+    flex-direction: row-reverse;
+    height: 85vh;
+    padding-left: 5rem ;
+    padding-right: 5rem;
+}
+.title__imagen{
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    box-shadow:5px 5px 15px rgba(0, 0, 0, 0.5); ;
+}
+.title__container{
+    display: flex;
+    flex-direction: column;
+}
+.title__bio{
+    font-size: 50px;
+    font-style: normal;
+    color: var(--cor-de-texto-principal);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+.title__subsection{
+    text-align: justify;
+    padding: 20px;
+    font-size: 20px;
+    color: var(--cor-de-texto-secundario);
+}
+.title__network{
+    padding-top: 20px;
+    display: flex;
+    font-size: 20px;
+}
+.title__network__item{
+    margin: 0 0 0 20px;
+}
+.title__network__item a{
+    color: var(--cor-de-acento--primario);
+    transition: 0.15s;
+}
+.profecion{
+    color: var(--cor-de-fundo);
+}
+.title__network__item__cv{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0 20px;
+    background-color: var(--cor-de-acento--primario);
+    border-radius: 1rem;
+    width: 6rem;
+    height: 1.4rem;
+    transition: 0.15s;
+}
+.title__network__item__cv a{
+    color: var(--cor-de-encabezado-o-pie);
+}
+.title__network__item__cv a:hover{
+    color: var(--cor-de-texto-principal);
+}
+@media screen and(min-width:1025px){
+    .title__bio{
+        font-size: 50px;
+    }
+    .title__imagen{
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        box-shadow:5px 5px 15px rgba(0, 0, 0, 0.5); ;
+    }
+}
+@media screen and (max-width:1024px){
+    .title__bio{
+        font-size: 30px;
+    }
+    .title__imagen{
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        box-shadow:5px 5px 15px rgba(0, 0, 0, 0.5); ;
+    }
+}
+@media screen and (max-width:896px) {
+    .title__bio{
+        font-size: 25px;
+    }
+    .title__imagen{
+        width: 200px;
+        height: 200px;
+        border-radius: 1000px;
+        box-shadow:5px 5px 15px rgba(0, 0, 0, 0.5); ;
+    }
+    .title__div{
+        padding-left: 2.5rem ;
+        padding-right: 2.5rem;
+    }
+}
+@media screen and (max-width:480px) {
+    .title__bio{
+        font-size: 25px;
+    }
+    .title__div{
+        padding-left: 0 rem;
+        padding-right: 0rem;
+    }
+    .title__network__item a{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:650px) {
+    
+    .title__div{
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+}

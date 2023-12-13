@@ -1,0 +1,54 @@
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 5rem ;
+    padding-right: 5rem;
+    padding-bottom: 10px;
+    background-color: var(--cor-de-encabezado-o-pie);
+}
+.menu__header{
+    display: flex;
+    align-items: center;
+}
+.menu__list{
+    display: flex;
+}
+.menu__item__list{
+    margin: 0 0 0 10px;
+}
+.menu__item__list a{
+    color: var(--cor-de-acento--primario);
+}
+.menu__item__list a:hover{
+    color: var(--cor-de-texto-secundario);
+    border-radius: 10px;
+    padding: 5px;
+    border: 2px solid var(--cor-de-texto-secundario);
+}
+.menu__title{
+    text-decoration: initial;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: var(--cor-de-acento--primario);
+}
+.logodixmatto{
+    width: 80px;
+    height: auto;
+    transform: scale(1);
+}
+.logoimagen{
+    transform: scaleX(-1);
+}
+@media screen and (min-width:0px) {
+    .menu__list .menu__item__list:not(:last-child){
+        display: none;
+
+    }
+}
+@media screen and (min-width:1000px) {
+    .menu__list .menu__item__list:not(:last-child){
+        display: block;
+    }
+}
