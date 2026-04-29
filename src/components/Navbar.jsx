@@ -5,6 +5,7 @@ const Navbar = () => {
     <header className="navbar">
       <div className="container navbar-container">
         <div className="logo">
+          <img src="assets/LogoV.png" alt="Logo" className="navbar-logo" />
           <h2><span className="text-gradient">Carlo</span> Prado</h2>
         </div>
         <nav>
