@@ -7,7 +7,7 @@ const Projects = () => {
     { title: 'Portfolio', image: 'assets/Portfolio.png', link: 'https://dixmattostudio.com/' },
     { title: 'PetShop', image: 'assets/PetShop.png', link: 'https://dixmattostudio.com/PetShop/registro.html' },
     { title: 'Mini Alura', image: 'assets/miniAlura.png', link: 'https://dixmattostudio.com/MiniAlura/' },
-    { title: 'Fruta & Fruto', image: 'assets/Fruta%26Fruto.png', link: 'https://dixmattostudio.com/Fruta%26Fruto/' },
+    { title: 'Fruta & Fruto', image: 'assets/FrutaFruto.png', link: 'https://dixmattostudio.com/Fruta%26Fruto/' },
   ];
 
   const unityProjects = [
@@ -15,7 +15,7 @@ const Projects = () => {
     { title: 'Grillas (Tetris)', image: 'https://img.itch.zone/aW1nLzE4MTI3Mzc5LnBuZw==/original/BCXrMC.png', link: 'https://sambogames.itch.io/tetris' },
     { title: 'MathBuffet', image: 'https://img.itch.zone/aW1nLzE4MDU3NDIxLmpwZw==/original/4rlyEi.jpg', link: 'https://sambogames.itch.io/mathclient' },
     { title: 'Wizard Defender', image: 'https://img.itch.zone/aW1nLzE4MDM4OTk2LnBuZw==/original/BXNMMz.png', link: 'https://sambogames.itch.io/denfender' },
-    { title: 'Space Attack', image: 'assets/Galactic Invasion.png', link: 'https://sambogames.itch.io/space' },
+    { title: 'Space Attack', image: 'assets/GalacticInvasion.png', link: 'https://sambogames.itch.io/space' },
     { title: 'Tic Tac Toe', image: 'https://img.itch.zone/aW1nLzEyMjY4NDk4LnBuZw==/original/mARiHl.png', link: 'https://sambogames.itch.io/tic-tac-toe' },
     { title: 'Harvest Rush', image: 'https://img.itch.zone/aW1nLzEyMjY2ODQzLnBuZw==/original/5XCR6f.png', link: 'https://sambogames.itch.io/harvest-rush' },
     { title: 'Fantasy Math', image: 'https://img.itch.zone/aW1nLzEyMTUzOTI2LnBuZw==/original/tZ4UBM.png', link: 'https://sambogames.itch.io/fantasy-math' },
