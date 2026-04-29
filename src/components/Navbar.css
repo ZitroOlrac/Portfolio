@@ -57,7 +57,25 @@
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    top: 0.5rem;
+  }
+  
+  .navbar-container {
+    width: 95%;
+    padding: 0.6rem 1.5rem;
+    justify-content: center; /* Center logo on mobile */
+  }
+
   .nav-links {
-    display: none; /* In a real app we'd add a hamburger menu */
+    display: none; 
+  }
+  
+  .logo h2 {
+    font-size: 1.2rem;
+  }
+  
+  .navbar-logo {
+    height: 30px;
   }
 }
