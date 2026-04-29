@@ -111,3 +111,17 @@ ul {
   color: white;
   box-shadow: 0 10px 20px rgba(45, 52, 54, 0.2);
 }
+/* Prevent text selection cursor on images and buttons */
+img, .btn, .nav-links a, .hero-badge, .image-wrapper {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Ensure background text doesn't show text cursor unless it's a paragraph */
+.bento-box, .hero-image, .logo {
+  cursor: default;
+}
+
+p, span, h1, h2, h3, h4, h5, h6, input, textarea {
+  cursor: auto;
+}
