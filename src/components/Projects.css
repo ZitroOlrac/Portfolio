@@ -2,63 +2,6 @@
   padding: 4rem 0;
 }
 
-.live-badge {
-  font-size: 1rem;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800;
-  vertical-align: middle;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
-
-.projects-loading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 4rem;
-  color: var(--text-secondary);
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.loading-spinner {
-  width: 50px;
-  height: 50px;
-  border: 6px solid var(--bg-color);
-  border-top: 6px solid var(--accent-color);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-.projects-error {
-  background: white;
-  border-radius: var(--border-radius-lg);
-  padding: 2rem;
-  text-align: center;
-  color: var(--accent-color);
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.project-img-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  background: var(--bg-color);
-}
-
 .projects-category {
   margin-bottom: 5rem;
 }
