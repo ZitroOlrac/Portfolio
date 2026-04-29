@@ -8,7 +8,7 @@ const Contact = () => {
         
         <div className="contact-grid">
           <div className="contact-image">
-            <img src="/assets/contact-us.png" alt="Contacto" />
+            <img src="assets/contact-us.png" alt="Contacto" />
           </div>
           
           <div className="bento-box contact-form-wrapper">

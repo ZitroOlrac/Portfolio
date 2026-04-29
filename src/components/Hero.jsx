@@ -14,7 +14,7 @@ const Hero = () => {
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="btn">Ver Proyectos</a>
-            <a href="/media/ResumeCV_Es_CarloGameDev.pdf" download="ResumeCV_Es_CarloGameDev" className="btn btn-outline">Descargar CV</a>
+            <a href="media/ResumeCV_Es_CarloGameDev.pdf" download="ResumeCV_Es_CarloGameDev" className="btn btn-outline">Descargar CV</a>
           </div>
           <div className="hero-social">
             <a href="https://github.com/ZitroOlrac" target="_blank" rel="noreferrer">GitHub</a>
@@ -25,7 +25,7 @@ const Hero = () => {
         </div>
         <div className="hero-image">
           <div className="image-wrapper">
-            <img src="/assets/fotoperfil.png" alt="Carlo Fabian" />
+            <img src="assets/fotoperfil.png" alt="Carlo Fabian" />
           </div>
         </div>
       </div>

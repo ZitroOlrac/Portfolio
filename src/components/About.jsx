@@ -20,10 +20,10 @@ const About = () => {
           <div className="bento-box badges-panel">
             <h3 className="bento-title">Logros</h3>
             <div className="badges-grid">
-              <img src="/assets/insignia 1.png" alt="Insignia 1" className="badge" />
-              <img src="/assets/InsignieaReto2.png" alt="Insignia 2" className="badge" />
-              <img src="/assets/InsignieaReto3.png" alt="Insignia 3" className="badge" />
-              <img src="/assets/InsignieaReto4.png" alt="Insignia 4" className="badge" />
+              <img src="assets/insignia 1.png" alt="Insignia 1" className="badge" />
+              <img src="assets/InsignieaReto2.png" alt="Insignia 2" className="badge" />
+              <img src="assets/InsignieaReto3.png" alt="Insignia 3" className="badge" />
+              <img src="assets/InsignieaReto4.png" alt="Insignia 4" className="badge" />
             </div>
           </div>
         </div>
