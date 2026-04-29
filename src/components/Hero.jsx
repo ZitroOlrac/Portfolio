@@ -27,6 +27,9 @@ const Hero = () => {
           <div className="image-wrapper">
             <img src="assets/fotoperfil.png" alt="Carlo Fabian" />
           </div>
+          <div className="image-wrapper brand-card">
+            <img src="assets/LogoV.png" alt="Dixmatto Studio Logo" />
+          </div>
         </div>
       </div>
     </section>
