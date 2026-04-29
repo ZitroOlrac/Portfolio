@@ -82,7 +82,7 @@
 
 .hero-image {
   flex: 1.2;
-  height: 450px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,41 +90,44 @@
 }
 
 .image-wrapper {
-  width: 320px;
-  height: 320px;
-  border-radius: 40px;
+  width: 350px;
+  height: 350px;
+  border-radius: 30px;
   overflow: hidden;
-  box-shadow: var(--shadow-bento);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   border: 12px solid white;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   background: white;
   position: absolute;
 }
 
+/* Card 1: Photo */
 .image-wrapper:first-child {
-  transform: rotate(-6deg) translateX(-30px);
+  transform: rotate(-8deg) translateX(-40px);
   z-index: 2;
 }
 
+/* Card 2: Brand Logo */
 .brand-card {
-  width: 220px;
-  height: 220px;
-  transform: rotate(12deg) translateX(80px) translateY(40px);
-  background: #e0ffff; /* Light cyan */
+  transform: rotate(8deg) translateX(40px);
+  z-index: 1;
+  background: #f0f8ff; /* Soft light blue */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
-  z-index: 1;
+  padding: 2rem;
 }
 
 .brand-card img {
   object-fit: contain !important;
+  width: 80%;
+  height: 80%;
 }
 
 .image-wrapper:hover {
-  transform: rotate(0deg) scale(1.1);
-  z-index: 100;
+  transform: scale(1.05) rotate(0deg);
+  z-index: 10;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
 }
 
 .image-wrapper img {
@@ -137,19 +140,21 @@
   .hero-container {
     flex-direction: column-reverse;
     text-align: center;
+    gap: 1rem;
   }
 
   .hero-image {
-    height: 350px;
+    height: 380px;
+    width: 100%;
     margin-bottom: 2rem;
   }
 
   .hero-content {
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.5rem;
   }
 
   .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .hero-buttons {
@@ -163,12 +168,16 @@
   }
 
   .image-wrapper {
-    width: 240px;
-    height: 240px;
+    width: 280px;
+    height: 280px;
+    border-width: 8px;
+  }
+  
+  .image-wrapper:first-child {
+    transform: rotate(-5deg) translateX(-20px);
   }
   
   .brand-card {
-    width: 160px;
-    height: 160px;
+    transform: rotate(5deg) translateX(20px);
   }
 }
