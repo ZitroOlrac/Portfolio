@@ -1,0 +1,45 @@
+:root{
+    --cor-de-fundo: #8b5e3b;
+    --cor-de-acento--primario:#c49a6c;
+    --cor-de-acento--secundario:#ed1c24;
+    --cor-de-texto-principal:#f2f2f3;
+    --cor-de-texto-secundario:#cccaca;
+    --cor-de-encabezado-o-pie:#424143;
+    --cor-de-acento-adicional:#3a3a3c;
+    --cor-de-fondo-oscuro:#000000;
+    
+    --cor-de-link: #000;
+    --font-lilita:'Lilita One', cursive;
+    --font-Gluten: 'Gluten', cursive;
+    --font-luckiest: 'Luckiest Guy', cursive;
+    --font-start: 'Press Start 2P', cursive;
+    --font-russo: 'Russo One', sans-serif;
+    --font-titan: 'Titan One', cursive;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+h3{
+    font-family: var(--font-Gluten), cursive;
+}
+h2{
+    font-family: var(--font-lilita), cursive;
+}
+h1, button{
+    font-family: var(--font-titan), cursive;
+}
+p{
+    font-family: var(--font-Gluten), cursive;
+}
+ol, ul,li{
+    list-style: none;
+    font-family: var(--font-lilita), cursive;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}

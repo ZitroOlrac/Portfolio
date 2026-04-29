@@ -1,0 +1,126 @@
+.projects {
+  padding: 4rem 0;
+}
+
+.live-badge {
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  vertical-align: middle;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.projects-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 4rem;
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid var(--bg-color);
+  border-top: 6px solid var(--accent-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.projects-error {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  text-align: center;
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.project-img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  background: var(--bg-color);
+}
+
+.projects-category {
+  margin-bottom: 5rem;
+}
+
+.projects-category h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-primary);
+  display: inline-block;
+  background: var(--accent-secondary);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  transform: rotate(-2deg);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.project-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-img {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 4px solid var(--bg-color);
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img img {
+  transform: scale(1.1);
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-info h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.project-info .btn {
+  text-align: center;
+  width: 100%;
+}

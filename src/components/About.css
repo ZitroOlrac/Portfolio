@@ -1,0 +1,55 @@
+.about {
+  padding: 4rem 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.bento-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+.badges-panel {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff0f5; /* Light pink bento box */
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.badge {
+  width: 100%;
+  max-width: 120px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+}
+
+.badge:hover {
+  transform: scale(1.15) rotate(5deg);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
