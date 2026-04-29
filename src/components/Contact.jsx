@@ -13,7 +13,7 @@ const Contact = () => {
           
           <div className="bento-box contact-form-wrapper">
             <h3>Complete el formulario</h3>
-            <form className="contact-form" action="https://formspree.io/f/xnqwoywg" method="POST">
+            <form className="contact-form" action="https://formspree.io/f/mdabnddw" method="POST">
               <div className="form-group">
                 <input type="text" name="nombre" placeholder="Nombre" required />
               </div>
