@@ -111,17 +111,25 @@ ul {
   color: white;
   box-shadow: 0 10px 20px rgba(45, 52, 54, 0.2);
 }
-/* Prevent text selection cursor on images and buttons */
-img, .btn, .nav-links a, .hero-badge, .image-wrapper {
+/* Prevent text selection and the 'writing bar' (caret) from appearing on decorative areas */
+* {
+  caret-color: transparent;
+}
+
+input, textarea {
+  caret-color: auto;
+}
+
+img, .btn, .nav-links a, .menu-toggle, .hero-badge, .image-wrapper, .bento-box {
   user-select: none;
   -webkit-user-drag: none;
 }
 
-/* Ensure background text doesn't show text cursor unless it's a paragraph */
-.bento-box, .hero-image, .logo {
+/* Ensure background text doesn't show text cursor */
+body, .container, .hero-image, .logo {
   cursor: default;
 }
 
-p, span, h1, h2, h3, h4, h5, h6, input, textarea {
+p, span, h1, h2, h3, h4, h5, h6 {
   cursor: auto;
 }
