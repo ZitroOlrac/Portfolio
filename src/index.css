@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  --bg-color: #f7f3f5; /* Light creamy/pinkish background */
+  --bento-bg: #ffffff;
+  --text-primary: #2d3436;
+  --text-secondary: #636e72;
+  --accent-color: #ff7675;
+  --accent-secondary: #74b9ff;
+  --border-radius-lg: 32px;
+  --border-radius-md: 20px;
+  --shadow-bento: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: radial-gradient(var(--accent-secondary) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: -15px -15px;
+  background-color: var(--bg-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lilita One', cursive;
+  letter-spacing: 1px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Bento Box Utilities */
+.bento-box {
+  background: var(--bento-bg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-bento);
+  padding: 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.bento-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography Utilities */
+.text-accent {
+  color: var(--accent-color);
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  padding-top: 4rem;
+  color: var(--text-primary);
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-family: 'Lilita One', cursive;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: var(--accent-color);
+  color: white;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 118, 117, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 3px solid var(--text-primary);
+  color: var(--text-primary);
+}
+
+.btn-outline:hover {
+  background: var(--text-primary);
+  color: white;
+  box-shadow: 0 10px 20px rgba(45, 52, 54, 0.2);
+}

@@ -1,0 +1,88 @@
+.about__container{
+    display: flex;
+    padding-left: 5rem ;
+    padding-right: 5rem;
+    flex-direction: column;
+    background-color:var(--cor-de-acento-adicional);
+
+}
+.about__title{
+    padding-top: 20px;
+    font-size: 30px;
+    color: var(--cor-de-texto-principal);
+}
+.about__paragraph{
+    padding: 20px;
+    font-size: 20px;
+    text-align: justify;
+    align-self: center;
+    color: var(--cor-de-texto-secundario);
+}
+.title__network__item a:hover{
+    color: var(--cor-de-texto-secundario);
+    border-radius: 10px;
+    padding: 5px;
+    border: 2px solid var(--cor-de-texto-secundario);
+}
+.insignias__box{
+    display: flex;
+}
+.insignias__box img{
+    padding: 1rem 0 0 1rem;
+    width: auto;
+    height: 10rem;
+}
+.about__insignias__tittle{
+    padding-top: 20px;
+    font-size: 20px;
+    color: var(--cor-de-texto-principal);
+}
+@media screen and(max-width:1024px) {
+    .about__container{
+        height: 100vh;
+    }
+}
+@media screen and (max-width:480px) {
+    .about__container{
+        padding-left: 1rem ;
+        padding-right: 1rem;
+    }
+    .about__title{
+        text-align: center;
+    }
+    .about__insignias img{
+        width: 4rem;
+        height: 4rem;
+    }
+}
+@media screen and (max-width:809px) {
+    .about__insignias img{
+        width: 8rem;
+        height: 8rem;
+    }
+}
+@media screen and (max-width:723px) {
+    .about__insignias img{
+        width: 6rem;
+        height: 6rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .about__insignias img{
+        width: 5rem;
+        height: 5rem;
+    }
+}
+@media screen and (max-width:480px) {
+    .about__insignias img{
+        width: 4.6rem;
+        height: 4.6rem;
+    }
+}
+@media screen and (max-width:375px) {
+    .about__insignias img{
+        width: 3rem;
+        height: 3rem;
+    justify-content: center;
+    }
+}
