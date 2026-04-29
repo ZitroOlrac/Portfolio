@@ -8,17 +8,15 @@
 
 .hero-container {
   display: flex;
-  flex-direction: column-reverse; /* Image on top, text below */
   align-items: center;
-  gap: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
+  gap: 3rem;
+  width: 100%;
 }
 
 .hero-content {
-  flex: 1;
-  padding: 2rem 1rem;
-  text-align: center;
+  flex: 1.2;
+  padding: 4rem 3rem;
+  text-align: left;
 }
 
 .hero-badge {
@@ -58,14 +56,12 @@
 .hero-buttons {
   display: flex;
   gap: 1rem;
-  justify-content: center;
 }
 
 .hero-social {
   display: flex;
   gap: 1.5rem;
   margin-top: 1.5rem;
-  justify-content: center;
 }
 
 .hero-social a {
