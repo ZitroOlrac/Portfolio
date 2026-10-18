@@ -1,16 +1,27 @@
-# React + Vite
+# Portafolio de Carlo Prado
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio personal: videojuegos en Unity, experiencias de realidad aumentada y virtual, desarrollo web y automatización de procesos con IA.
 
-Currently, two official plugins are available:
+**En vivo:** https://zitroolrac.github.io/Portfolio/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- React 19 + Vite
+- CSS propio (sin frameworks), con modo oscuro automático y diseño responsive
+- Formulario de contacto con [Formspree](https://formspree.io/)
+- Despliegue en GitHub Pages con `gh-pages`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Desarrollo
 
-## Expanding the ESLint configuration
+```bash
+npm install
+npm run dev      # servidor local
+npm run lint     # revisar el código
+npm run deploy   # compilar y publicar en GitHub Pages
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Editar el contenido
+
+Todos los textos, proyectos, experiencia y enlaces están en [`src/data.js`](src/data.js). Para agregar un juego o una web, añade un objeto al arreglo correspondiente de `projects`; las tarjetas y los contadores se actualizan solos.
+
+Las imágenes van en `public/assets/` (preferiblemente en `.webp`).

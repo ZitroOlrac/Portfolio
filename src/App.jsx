@@ -1,22 +1,25 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
+import Services from './components/Services';
+import Automation from './components/Automation';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
   return (
     <>
+      <a href="#main" className="skip-link">Saltar al contenido</a>
       <Navbar />
-      <main>
+      <main id="main">
         <Hero />
-        <About />
-        <Skills />
+        <Services />
+        <Automation />
         <Experience />
         <Projects />
+        <About />
         <Contact />
       </main>
       <Footer />
