@@ -14,7 +14,10 @@ const Automation = () => (
         <ul className="automation__ideas">
           {automationIdeas.map((idea) => <li key={idea}>{idea}</li>)}
         </ul>
-        <a href="#contacto" className="btn btn--amber">Cuéntame tu proceso</a>
+        <div className="automation__actions">
+          <a href="#contacto" className="btn btn--amber">Cuéntame tu proceso</a>
+          <a href="#videos" className="automation__link">Mira mis videos de n8n</a>
+        </div>
       </div>
 
       <ol className="steps" aria-label="Cómo trabajo una automatización">
