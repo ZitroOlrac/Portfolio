@@ -1,36 +1,53 @@
-import './Hero.css';
+import { asset, profile, projects, socials } from '../data';
 
-const Hero = () => {
-  return (
-    <section className="hero" id="home">
-      <div className="container hero-container">
-        <div className="hero-content bento-box">
-          <div className="hero-badge">Dixmatto</div>
-          <h1>Hola, soy <br /><span className="text-accent">Carlo Prado</span></h1>
-          <h3>Indie Developer & Web Programmer</h3>
-          <p>
-            Bachiller en Ingeniería de Sistemas e Informática, CEO & Founder de Dixmatto Studio.
-            Transformando ideas en experiencias digitales interactivas, desde videojuegos hasta aplicaciones web.
-          </p>
-          <div className="hero-buttons">
-            <a href="#projects" className="btn">Ver Proyectos</a>
-            <a href="media/ResumeCV_Es_CarloGameDev.pdf" download="ResumeCV_Es_CarloGameDev" className="btn btn-outline">Descargar CV</a>
-          </div>
-          <div className="hero-social">
-            <a href="https://github.com/ZitroOlrac" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/carlo-fabian-prado-ortiz-170230121/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://www.instagram.com/pradoortiz_dev/" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="https://sambogames.itch.io/" target="_blank" rel="noreferrer">Itch.io</a>
-          </div>
+const yearsCoding = new Date().getFullYear() - 2020;
+
+const Hero = () => (
+  <section className="hero" id="inicio">
+    <div className="container hero__grid">
+      <div className="hero__copy">
+        <p className="hero__kicker">Hola, soy</p>
+        <h1 className="hero__name">{profile.name}</h1>
+        <p className="hero__lead">
+          Hago videojuegos, experiencias de realidad aumentada y virtual, aplicaciones web
+          y, ahora, automatizaciones con IA que le ahorran horas de trabajo a las empresas.
+        </p>
+        <div className="hero__actions">
+          <a href="#proyectos" className="btn btn--primary">Ver proyectos</a>
+          <a href={asset(profile.cv)} download className="btn btn--ghost">Descargar CV</a>
         </div>
-        <div className="hero-image">
-          <div className="image-wrapper">
-            <img src="assets/carlo.jpg" alt="Carlo Fabian" />
-          </div>
-        </div>
+        <ul className="hero__socials">
+          {socials.map((s) => (
+            <li key={s.label}>
+              <a href={s.href} target="_blank" rel="noreferrer">{s.label}</a>
+            </li>
+          ))}
+        </ul>
       </div>
-    </section>
-  );
-};
+
+      <aside className="card-player" aria-label="Resumen de perfil">
+        <div className="card-player__photo">
+          <img src={asset(profile.photo)} alt={`Foto de ${profile.fullName}`} width="720" height="1092" />
+        </div>
+        <div className="card-player__body">
+          <div className="card-player__id">
+            <strong>{profile.fullName}</strong>
+            <span>Bachiller en Ingeniería de Sistemas e Informática</span>
+            <span>Fundador de {profile.studio}, {profile.location}</span>
+          </div>
+          <dl className="card-player__stats">
+            <div><dt>Juegos publicados</dt><dd>{projects.games.length}</dd></div>
+            <div><dt>Proyectos web</dt><dd>{projects.web.length}</dd></div>
+            <div><dt>Años programando</dt><dd>{yearsCoding}</dd></div>
+          </dl>
+        </div>
+        <p className="card-player__unlock">
+          <span className="card-player__unlock-icon" aria-hidden="true">★</span>
+          <span>Nueva habilidad desbloqueada: <strong>automatización con IA</strong></span>
+        </p>
+      </aside>
+    </div>
+  </section>
+);
 
 export default Hero;
