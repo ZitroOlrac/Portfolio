@@ -16,7 +16,25 @@ export const socials = [
   { label: 'GitHub', href: 'https://github.com/ZitroOlrac' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/carlo-fabian-prado-ortiz-170230121/' },
   { label: 'Itch.io', href: 'https://sambogames.itch.io/' },
+  { label: 'YouTube', href: 'https://www.youtube.com/@dixmattostudio' },
   { label: 'Instagram', href: 'https://www.instagram.com/pradoortiz_dev/' },
+];
+
+export const youtubeChannel = 'https://www.youtube.com/@dixmattostudio';
+
+// Shorts del canal. Para agregar uno nuevo, copia el ID que aparece en
+// youtube.com/shorts/<ID> y añádelo al inicio de la lista.
+export const shorts = [
+  { id: 'R5xg-qAck_M', title: 'Field of view' },
+  { id: 'vKllIsU2snE', title: 'Cinemachine track & dolly' },
+  { id: 'kfaGxlYkS-4', title: 'Cinemáticas épicas' },
+  { id: 'njc3nP2tvPI', title: 'Storytime' },
+  { id: 'ER6HB_3ZQAQ', title: 'Animation events' },
+  { id: 'L2sYUzlswqA', title: 'Recreando la IA de Hello Neighbor' },
+  { id: 'Mo3WNVqg414', title: 'Anima tu personaje en Unity' },
+  { id: 'hgijVrFLYxw', title: 'Animaciones con Mixamo' },
+  { id: 'TukuNd4tPo8', title: 'Personalizar personaje en Unity' },
+  { id: '7m7az3IUHbg', title: 'Configurar personaje en Unity' },
 ];
 
 export const services = [

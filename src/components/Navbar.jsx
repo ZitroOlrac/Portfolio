@@ -6,6 +6,7 @@ const links = [
   { href: '#automatizacion', label: 'IA' },
   { href: '#experiencia', label: 'Experiencia' },
   { href: '#proyectos', label: 'Proyectos' },
+  { href: '#videos', label: 'Videos' },
   { href: '#sobre-mi', label: 'Sobre mí' },
 ];
 
