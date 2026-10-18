@@ -22,19 +22,49 @@ export const socials = [
 
 export const youtubeChannel = 'https://www.youtube.com/@dixmattostudio';
 
-// Shorts del canal. Para agregar uno nuevo, copia el ID que aparece en
-// youtube.com/shorts/<ID> y añádelo al inicio de la lista.
-export const shorts = [
-  { id: 'R5xg-qAck_M', title: 'Field of view' },
-  { id: 'vKllIsU2snE', title: 'Cinemachine track & dolly' },
-  { id: 'kfaGxlYkS-4', title: 'Cinemáticas épicas' },
-  { id: 'njc3nP2tvPI', title: 'Storytime' },
-  { id: 'ER6HB_3ZQAQ', title: 'Animation events' },
-  { id: 'L2sYUzlswqA', title: 'Recreando la IA de Hello Neighbor' },
-  { id: 'Mo3WNVqg414', title: 'Anima tu personaje en Unity' },
-  { id: 'hgijVrFLYxw', title: 'Animaciones con Mixamo' },
-  { id: 'TukuNd4tPo8', title: 'Personalizar personaje en Unity' },
-  { id: '7m7az3IUHbg', title: 'Configurar personaje en Unity' },
+// Videos del canal. Para agregar uno nuevo, copia el ID del link
+// (youtube.com/watch?v=<ID> o youtube.com/shorts/<ID>) y añádelo al inicio de su lista.
+export const videoGroups = [
+  {
+    id: 'n8n',
+    label: 'Automatización con n8n',
+    description: 'Serie "Aprende conmigo": bots de Telegram con IA, paso a paso con n8n y Docker.',
+    format: 'wide',
+    videos: [
+      { id: 'N-UFBhJbYZU', title: 'Cómo hacer que tu bot de Telegram lea documentos de Google Sheets', duration: '28:20' },
+      { id: 'jxuzxy9CaMY', title: 'Cómo hacer que tu bot de Telegram entienda mensajes de voz con n8n, Ngrok y Docker', duration: '11:27' },
+      { id: 'IEmTeZYiAk8', title: 'Cómo conecté Telegram a n8n usando Ngrok y Docker', duration: '22:51' },
+      { id: 'MMpdj4zXCZk', title: 'Mi primer chat con IA en n8n (Docker + Hugging Face)', duration: '19:51' },
+    ],
+  },
+  {
+    id: 'trailers',
+    label: 'Tráileres',
+    description: 'Tráileres de mis juegos publicados en itch.io.',
+    format: 'wide',
+    videos: [
+      { id: 'hCB7QYAPHI4', title: 'Fantasy Math', duration: '0:31' },
+      { id: 'XBKmM3Vr4ao', title: 'Floating Islands Runner', duration: '0:32' },
+    ],
+  },
+  {
+    id: 'shorts',
+    label: 'Tutoriales de Unity',
+    description: 'Shorts sobre animación, cámaras e inteligencia artificial en juegos.',
+    format: 'tall',
+    videos: [
+      { id: 'R5xg-qAck_M', title: 'Field of view' },
+      { id: 'vKllIsU2snE', title: 'Cinemachine track & dolly' },
+      { id: 'kfaGxlYkS-4', title: 'Cinemáticas épicas' },
+      { id: 'njc3nP2tvPI', title: 'Storytime' },
+      { id: 'ER6HB_3ZQAQ', title: 'Animation events' },
+      { id: 'L2sYUzlswqA', title: 'Recreando la IA de Hello Neighbor' },
+      { id: 'Mo3WNVqg414', title: 'Anima tu personaje en Unity' },
+      { id: 'hgijVrFLYxw', title: 'Animaciones con Mixamo' },
+      { id: 'TukuNd4tPo8', title: 'Personalizar personaje en Unity' },
+      { id: '7m7az3IUHbg', title: 'Configurar personaje en Unity' },
+    ],
+  },
 ];
 
 export const services = [
@@ -54,7 +84,7 @@ export const services = [
     id: 'ai',
     title: 'Automatización de procesos con IA',
     text: 'Flujos que hacen solas las tareas repetitivas de una empresa: leer correos y documentos, clasificar, responder y llevar los datos a donde se necesitan.',
-    tools: ['APIs de modelos de IA', 'n8n', 'Python', 'Integración con correo y hojas de cálculo', 'Prompt engineering'],
+    tools: ['n8n', 'Docker', 'Bots de Telegram', 'Hugging Face', 'Google Sheets', 'Ngrok'],
   },
 ];
 
