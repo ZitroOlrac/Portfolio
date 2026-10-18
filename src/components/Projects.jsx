@@ -1,59 +1,52 @@
-import './Projects.css';
+import { useState } from 'react';
+import { projects } from '../data';
+
+const tabs = [
+  { id: 'games', label: 'Videojuegos' },
+  { id: 'web', label: 'Web' },
+];
 
 const Projects = () => {
-  const webProjects = [
-    { title: 'E-Commerce', image: 'assets/aluraGeek.png', link: 'https://dixmattostudio.com/E-Comerce/index.html' },
-    { title: 'Reto Encriptador', image: 'assets/retoencriptado.png', link: 'https://dixmattostudio.com/RetoEncriptado/' },
-    { title: 'Portfolio', image: 'assets/Portfolio.png', link: 'https://dixmattostudio.com/' },
-    { title: 'PetShop', image: 'assets/PetShop.png', link: 'https://dixmattostudio.com/PetShop/registro.html' },
-    { title: 'Mini Alura', image: 'assets/miniAlura.png', link: 'https://dixmattostudio.com/MiniAlura/' },
-    { title: 'Fruta & Fruto', image: 'assets/FrutaFruto.png', link: 'https://dixmattostudio.com/Fruta%26Fruto/' },
-  ];
-
-  const unityProjects = [
-    { title: 'Bubble Boom', image: 'https://img.itch.zone/aW1nLzE4MTI4MTIyLmpwZw==/original/5dXzAX.jpg', link: 'https://sambogames.itch.io/bubble-boom' },
-    { title: 'Grillas (Tetris)', image: 'https://img.itch.zone/aW1nLzE4MTI3Mzc5LnBuZw==/original/BCXrMC.png', link: 'https://sambogames.itch.io/tetris' },
-    { title: 'MathBuffet', image: 'https://img.itch.zone/aW1nLzE4MDU3NDIxLmpwZw==/original/4rlyEi.jpg', link: 'https://sambogames.itch.io/mathclient' },
-    { title: 'Wizard Defender', image: 'https://img.itch.zone/aW1nLzE4MDM4OTk2LnBuZw==/original/BXNMMz.png', link: 'https://sambogames.itch.io/denfender' },
-    { title: 'Space Attack', image: 'assets/GalacticInvasion.png', link: 'https://sambogames.itch.io/space' },
-    { title: 'Tic Tac Toe', image: 'https://img.itch.zone/aW1nLzEyMjY4NDk4LnBuZw==/original/mARiHl.png', link: 'https://sambogames.itch.io/tic-tac-toe' },
-    { title: 'Harvest Rush', image: 'https://img.itch.zone/aW1nLzEyMjY2ODQzLnBuZw==/original/5XCR6f.png', link: 'https://sambogames.itch.io/harvest-rush' },
-    { title: 'Fantasy Math', image: 'https://img.itch.zone/aW1nLzEyMTUzOTI2LnBuZw==/original/tZ4UBM.png', link: 'https://sambogames.itch.io/fantasy-math' },
-    { title: 'Floating Islands Runner', image: 'https://img.itch.zone/aW1nLzEyMTUzODE5LnBuZw==/original/Aiqw0f.png', link: 'https://sambogames.itch.io/floating-islandsr-runner' },
-    { title: 'Magic Math Defender', image: 'https://img.itch.zone/aW1nLzEwMzMzNTc2LnBuZw==/original/IjDPym.png', link: 'https://sambogames.itch.io/magic-math-defender' },
-    { title: 'CERV Defense', image: 'https://img.itch.zone/aW1nLzEzMTk0MjM1LnBuZw==/original/GwDkgo.png', link: 'https://sambogames.itch.io/cervdefense' },
-    { title: 'You Are Alive', image: 'https://img.itch.zone/aW1nLzEwMjg1NTMwLnBuZw==/original/kBUD9%2F.png', link: 'https://sambogames.itch.io/you-are-alive' },
-  ];
-
-  const renderProjectCard = (project, index) => (
-    <div className="bento-box project-card" key={index}>
-      <div className="project-img">
-        <img src={project.image} alt={project.title} loading="lazy" />
-      </div>
-      <div className="project-info">
-        <h4>{project.title}</h4>
-        <a href={project.link} target="_blank" rel="noreferrer" className="btn btn-outline">Ver Proyecto</a>
-      </div>
-    </div>
-  );
+  const [active, setActive] = useState('games');
 
   return (
-    <section className="projects" id="projects">
+    <section className="section section--tinted" id="proyectos">
       <div className="container">
-        <h2 className="section-title">Mis <span className="text-accent">Proyectos</span></h2>
-
-        <div className="projects-category">
-          <h3>Desarrollo Web</h3>
-          <div className="projects-grid">
-            {webProjects.map(renderProjectCard)}
+        <header className="section__head section__head--row">
+          <div>
+            <h2>Proyectos</h2>
+            <p>Los juegos se pueden jugar en el navegador desde itch.io.</p>
           </div>
-        </div>
-
-        <div className="projects-category">
-          <h3>Juegos (Unity)</h3>
-          <div className="projects-grid">
-            {unityProjects.map(renderProjectCard)}
+          <div className="tabs" role="tablist" aria-label="Tipo de proyecto">
+            {tabs.map((t) => (
+              <button
+                key={t.id}
+                role="tab"
+                id={`tab-${t.id}`}
+                aria-selected={active === t.id}
+                aria-controls="projects-panel"
+                className="tabs__btn"
+                onClick={() => setActive(t.id)}
+              >
+                {t.label} <span className="tabs__count">{projects[t.id].length}</span>
+              </button>
+            ))}
           </div>
+        </header>
+
+        <div id="projects-panel" role="tabpanel" aria-labelledby={`tab-${active}`} className="projects" key={active}>
+          {projects[active].map((p) => (
+            <a key={p.title} href={p.link} target="_blank" rel="noreferrer" className="project">
+              <div className="project__img">
+                <img src={p.image} alt="" loading="lazy" />
+              </div>
+              <div className="project__info">
+                <h3>{p.title}</h3>
+                {p.subtitle && <p>{p.subtitle}</p>}
+                <span className="project__cta">{active === 'games' ? 'Jugar' : 'Ver sitio'}</span>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </section>
