@@ -43,7 +43,7 @@ const Projects = () => {
               <div className="project__info">
                 <h3>{p.title}</h3>
                 {p.subtitle && <p>{p.subtitle}</p>}
-                <span className="project__cta">{active === 'games' ? 'Jugar' : 'Ver sitio'}</span>
+                <span className="project__cta">{active === 'games' ? 'Jugar' : p.link.includes('github.com') ? 'Ver código' : 'Ver sitio'}</span>
               </div>
             </a>
           ))}
