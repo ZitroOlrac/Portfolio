@@ -33,7 +33,7 @@ const Hero = () => (
           <div className="card-player__id">
             <strong>{profile.fullName}</strong>
             <span>Bachiller en Ingeniería de Sistemas e Informática</span>
-            <span>Fundador de {profile.studio}, {profile.location}</span>
+            <span>Fundador de {profile.studio} · {profile.location}</span>
           </div>
           <dl className="card-player__stats">
             <div><dt>Juegos publicados</dt><dd>{projects.games.length}</dd></div>
