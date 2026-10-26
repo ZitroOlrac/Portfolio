@@ -6,7 +6,7 @@ export const profile = {
   name: 'Carlo Prado',
   fullName: 'Carlo Fabian Prado Ortiz',
   role: 'Desarrollador de videojuegos, web y automatización con IA',
-  location: 'Arequipa, Perú',
+  location: 'Madrid, España',
   studio: 'Dixmatto Studio',
   cv: 'media/ResumeCV_Es_CarloGameDev.pdf',
   photo: 'assets/carlo.webp',
@@ -119,9 +119,17 @@ export const experiences = [
     company: 'CETEMIN',
     role: 'Unity Developer (AR)',
     period: '2024 – 2025',
-    tags: ['Unity', 'C#', 'Vuforia', 'AR'],
+    tags: ['Unity', 'C#', 'Vuforia', 'AR', 'IA'],
     description:
-      'Desarrollo de simuladores educativos con realidad aumentada para el sector minero. Escenas interactivas con Vuforia para capacitación industrial.',
+      'Dos simuladores educativos con realidad aumentada para capacitar operadores mineros: 6 vehículos simulados, patrones de perforación e inspecciones. También desarrollé «Sofía», un asistente con IA que guía y explica normas de seguridad.',
+  },
+  {
+    company: 'INGENIUM',
+    role: 'Analista de soporte web',
+    period: '2023',
+    tags: ['Moodle', 'HTML', 'CSS'],
+    description:
+      'Soporte y mantenimiento de la plataforma Moodle y maquetación de contenidos con HTML y CSS.',
   },
   {
     company: 'Sysbay',
@@ -140,12 +148,12 @@ export const experiences = [
       'Aplicación educativa de matemáticas para Android, orientada a estudiantes de primaria, como proyecto de tesis universitaria.',
   },
   {
-    company: 'MTC Arequipa',
+    company: 'GRTC Arequipa',
     role: 'Practicante de sistemas',
-    period: '2020',
-    tags: ['Sistemas', 'Soporte TI'],
+    period: '2018',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Soporte TI'],
     description:
-      'Prácticas profesionales en el Ministerio de Transportes y Comunicaciones, sede Arequipa. Primera experiencia laboral.',
+      'Prácticas en la Gerencia Regional de Transportes y Comunicaciones de Arequipa: mejoras y mantenimiento del frontend del sitio web. Primera experiencia laboral.',
   },
 ];
 

@@ -6,9 +6,10 @@ const About = () => (
       <div className="about__text">
         <h2>Sobre mí</h2>
         <p>
-          Soy bachiller en Ingeniería de Sistemas e Informática. Empecé haciendo prácticas en el
-          MTC de Arequipa y desde entonces he trabajado desarrollando simuladores de realidad
-          aumentada para minería y experiencias de realidad virtual.
+          Soy bachiller en Ingeniería de Sistemas e Informática. Empecé haciendo prácticas en la
+          Gerencia Regional de Transportes y Comunicaciones de Arequipa y desde entonces he trabajado
+          desarrollando simuladores de realidad aumentada para minería, asistentes con IA y experiencias
+          de realidad virtual. Hoy vivo en Madrid.
         </p>
         <p>
           En paralelo creo videojuegos 2D, 3D y de realidad aumentada con mi estudio,{' '}
