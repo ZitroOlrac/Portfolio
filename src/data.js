@@ -78,7 +78,7 @@ export const services = [
     id: 'web',
     title: 'Desarrollo web',
     text: 'Sitios y aplicaciones web responsivas, desde la maqueta hasta el despliegue.',
-    tools: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Git'],
+    tools: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'TanStack Query', 'Node.js', 'Git'],
   },
   {
     id: 'ai',
@@ -175,6 +175,8 @@ export const projects = {
     { title: 'You Are Alive', image: itch('aW1nLzEwMjg1NTMwLnBuZw==/original/kBUD9%2F.png'), link: 'https://sambogames.itch.io/you-are-alive' },
   ],
   web: [
+    { title: 'Pixel Market', subtitle: 'Tienda online · React + TypeScript', image: asset('assets/PixelMarket.webp'), link: 'https://zitroolrac.github.io/tienda-react/' },
+    { title: 'Pokédex', subtitle: 'PokeAPI · TanStack Query', image: asset('assets/Pokedex.webp'), link: 'https://zitroolrac.github.io/pokedex-react/' },
     { title: 'E-Commerce', subtitle: 'Tienda AluraGeek', image: asset('assets/aluraGeek.webp'), link: 'https://dixmattostudio.com/E-Comerce/index.html' },
     { title: 'Encriptador de texto', subtitle: 'Reto Alura ONE', image: asset('assets/retoencriptado.webp'), link: 'https://dixmattostudio.com/RetoEncriptado/' },
     { title: 'Fruta & Fruto', image: asset('assets/FrutaFruto.webp'), link: 'https://dixmattostudio.com/Fruta%26Fruto/' },
