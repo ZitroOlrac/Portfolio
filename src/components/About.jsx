@@ -23,10 +23,13 @@ const About = () => (
         </p>
       </div>
       <div className="about__badges">
-        <h3>Insignias Alura ONE</h3>
+        <h3>Insignias Alura ONE · Oracle Next Education</h3>
         <ul>
           {badges.map((b) => (
-            <li key={b.src}><img src={asset(b.src)} alt={b.alt} width="200" height="200" loading="lazy" /></li>
+            <li key={b.src}>
+              <img src={asset(b.src)} alt={b.alt} width="200" height="200" loading="lazy" />
+              <span>{b.label}</span>
+            </li>
           ))}
         </ul>
       </div>

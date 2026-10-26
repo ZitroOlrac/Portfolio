@@ -187,8 +187,8 @@ export const projects = {
 };
 
 export const badges = [
-  { src: 'assets/insignia1.webp', alt: 'Insignia Alura ONE, reto 1' },
-  { src: 'assets/InsignieaReto2.webp', alt: 'Insignia Alura ONE, reto 2' },
-  { src: 'assets/InsignieaReto3.webp', alt: 'Insignia Alura ONE, reto 3' },
-  { src: 'assets/InsignieaReto4.webp', alt: 'Insignia Alura ONE, reto 4' },
+  { src: 'assets/insignia1.webp', label: 'Reto 1 · Encriptador', alt: 'Insignia Alura ONE, reto 1: Encriptador de texto' },
+  { src: 'assets/InsignieaReto2.webp', label: 'Reto 2 · Portafolio', alt: 'Insignia Alura ONE, reto 2: Portafolio' },
+  { src: 'assets/InsignieaReto3.webp', label: 'Reto 3', alt: 'Insignia Alura ONE, reto 3' },
+  { src: 'assets/InsignieaReto4.webp', label: 'Reto 4', alt: 'Insignia Alura ONE, reto 4' },
 ];
