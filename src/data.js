@@ -182,7 +182,7 @@ export const projects = {
     { title: 'Fruta & Fruto', image: asset('assets/FrutaFruto.webp'), link: 'https://dixmattostudio.com/Fruta%26Fruto/' },
     { title: 'Mini Alura', image: asset('assets/miniAlura.webp'), link: 'https://dixmattostudio.com/MiniAlura/' },
     { title: 'PetShop', image: asset('assets/PetShop.webp'), link: 'https://dixmattostudio.com/PetShop/registro.html' },
-    { title: 'Portafolio anterior', image: asset('assets/Portfolio.webp'), link: 'https://dixmattostudio.com/' },
+    { title: 'Portafolio anterior', subtitle: 'Reto Alura ONE · HTML, CSS y JS', image: asset('assets/Portfolio.webp'), link: 'https://zitroolrac.github.io/Portfolio/portafolio-alura/' },
   ],
 };
 
