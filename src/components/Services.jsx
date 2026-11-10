@@ -1,4 +1,5 @@
 import { services } from '../data';
+import Mascot from './Mascot';
 
 const Services = () => (
   <section className="section" id="servicios">
@@ -7,9 +8,10 @@ const Services = () => (
         <h2>Qué puedo hacer por ti</h2>
         <p>Tres áreas en las que trabajo, con las herramientas que uso en cada una.</p>
       </header>
-      <div className="services">
+      <div className="services peek-scope">
         {services.map((s) => (
           <article key={s.id} className={`service service--${s.id}`}>
+            {s.id === 'ai' && <Mascot variant="peek--services" />}
             {s.id === 'ai' && <span className="tag-new">Nuevo</span>}
             <h3>{s.title}</h3>
             <p>{s.text}</p>
