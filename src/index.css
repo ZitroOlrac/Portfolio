@@ -1282,3 +1282,11 @@ main > section {
 .peek-wrap.is-in .peek-dog {
   transform: translate(0, 0) rotate(var(--r)) scale(var(--sx), 1);
 }
+.projects {
+  padding-top: 2.5rem;
+}
+@media (max-width: 860px) {
+  .about__badges {
+    margin-top: 3.5rem;
+  }
+}
