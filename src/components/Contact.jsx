@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Mascot from './Mascot';
 import { socials } from '../data';
 
 const FORM_ENDPOINT = 'https://formspree.io/f/mdabnddw';
@@ -26,8 +27,9 @@ const Contact = () => {
 
   return (
     <section className="section contact" id="contacto">
-      <div className="container">
+      <div className="container peek-scope">
         <div className="contact__grid">
+          <Mascot variant="peek--contact" />
         <div className="contact__intro">
           <h2>Hablemos</h2>
           <p>
