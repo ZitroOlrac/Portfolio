@@ -433,8 +433,6 @@ p {
   border-radius: var(--radius);
   box-shadow: 10px 10px 0 var(--ink);
   rotate: 1.5deg;
-  max-width: 400px;
-  justify-self: end;
   width: 100%;
 }
 .card-player__photo {
@@ -527,14 +525,65 @@ p {
   }
 }
 
+/* Escena 3D: la tarjeta se inclina con el mouse y el perro de Dixmatto se asoma por detrás */
+.hero__stage {
+  justify-self: end;
+  width: 100%;
+  max-width: 400px;
+  padding-top: 5.5rem;
+  perspective: 1100px;
+}
+.hero__tilt {
+  --rx: 0deg;
+  --ry: 0deg;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.hero__tilt .card-player {
+  transform-style: preserve-3d;
+}
+.hero__mascot {
+  position: absolute;
+  z-index: 0;
+  top: -6.6rem;
+  left: 9%;
+  width: 46%;
+  max-width: 180px;
+  height: auto;
+  rotate: -9deg;
+  transform: translateZ(-35px);
+  filter: drop-shadow(0 6px 0 rgba(20, 33, 61, 0.18));
+  transition: translate 0.35s cubic-bezier(0.3, 1.5, 0.5, 1), rotate 0.35s ease;
+  animation: mascot-peek 0.7s cubic-bezier(0.3, 1.4, 0.5, 1) 1s backwards;
+}
+.hero__stage:hover .hero__mascot {
+  translate: 0 -12px;
+  rotate: -4deg;
+}
+.hero__tilt .card-player {
+  z-index: 1;
+}
+@keyframes mascot-peek {
+  from {
+    translate: 0 70px;
+  }
+}
+
 @media (max-width: 860px) {
   .hero__grid {
     grid-template-columns: 1fr;
   }
-  .card-player {
+  .hero__stage {
     justify-self: center;
     max-width: 360px;
     margin-bottom: 1.5rem;
+    padding-top: 4.5rem;
+  }
+  .hero__mascot {
+    top: -5.4rem;
+    max-width: 140px;
   }
 }
 @media (max-width: 420px) {
@@ -1176,5 +1225,31 @@ p {
   }
   .videos__arrows {
     display: none;
+  }
+}
+
+/* ---------- Cursores pixel art (solo con mouse) ---------- */
+@media (pointer: fine) {
+  html {
+    cursor: url('./assets/cursor-sword.svg') 3 3, auto;
+  }
+  a,
+  button,
+  summary,
+  label,
+  [role='tab'],
+  .btn,
+  .tabs__btn,
+  .round-btn,
+  .video__play,
+  .nav__toggle {
+    cursor: url('./assets/cursor-hand.svg') 9 1, pointer;
+  }
+  input,
+  textarea {
+    cursor: text;
+  }
+  .btn:disabled {
+    cursor: progress;
   }
 }
