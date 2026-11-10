@@ -3,8 +3,8 @@ import { asset } from '../data';
 
 // El perro de Dixmatto Studio se asoma en cada sección al hacer scroll.
 // Cada vez que vuelves a una sección aparece en otro marco y en otra posición.
-// - frames: marcos detrás de los que se asoma (por arriba).
-// - edge: se asoma de lado desde el borde de la pantalla.
+// - frames: tarjetas detrás de las que se asoma (por arriba).
+// - edge: en secciones sin tarjetas, se asoma de lado desde el borde de la pantalla.
 // - firstRowOnly: usa solo los marcos de la primera fila.
 // Nunca se coloca donde taparía texto (ver coversText).
 const SPOTS = [
@@ -13,7 +13,7 @@ const SPOTS = [
   { section: '#experiencia', edge: 'left' },
   { section: '#proyectos', frames: '.project' },
   { section: '#videos', frames: '.video--wide .video__frame' },
-  { section: '#sobre-mi', frames: '.about__badges', edge: 'right' },
+  { section: '#sobre-mi', frames: '.about__badges' },
   { section: '#contacto', frames: '.contact__grid' },
 ];
 
@@ -106,8 +106,18 @@ function coversText(section, wrap) {
   return false;
 }
 
+// Coloca al perro sin animación (para que no "gire" al cambiar de sitio) y luego lo hace asomarse.
+function reveal(state) {
+  const { wrap } = state;
+  wrap.classList.add('is-placing');
+  void wrap.offsetWidth;
+  wrap.classList.remove('is-placing');
+  requestAnimationFrame(() => requestAnimationFrame(() => wrap.classList.add('is-in')));
+}
+
 function show(spot, state) {
   const list = candidates(spot, state.section);
+  state.wrap.classList.add('is-placing');
   state.wrap.classList.remove('is-in');
   if (!list.length) return;
 
@@ -117,11 +127,11 @@ function show(spot, state) {
     state.target = pick(list, attempt < 8 ? previous : null);
     state.fx = rand(0.1, 0.9);
     state.fy = rand(0.2, 0.75);
-    state.tilt = rand(-10, 10);
+    state.tilt = rand(-7, 7);
     state.flip = Math.random() < 0.5;
     place(state);
     if (!coversText(state.section, state.wrap)) {
-      requestAnimationFrame(() => requestAnimationFrame(() => state.wrap.classList.add('is-in')));
+      reveal(state);
       return;
     }
   }
