@@ -1,0 +1,97 @@
+.experiencia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5rem ;
+    padding-right: 5rem;
+    background-color: var(--cor-de-encabezado-o-pie);
+    
+}
+.experiencia__title{
+    font-size: 30px;
+    padding-top: 20px;
+    color: var(--cor-de-texto-principal);
+}
+.experiencia__line{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    justify-content: space-around;
+    width: 100%;
+}
+.experiencia__box{
+    background-color: var(--cor-de-encabezado-o-pie);
+    color: var(--cor-de-texto-secundario);
+    height: auto;
+    padding: 0.2rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 40px;
+    text-align: center;
+    flex-basis: calc(50% - 20px);
+    border-radius: 50px;
+}
+.experiencia__texto {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 20px; /* Espaciado alrededor del texto */
+}
+.experiencia__imagen{
+    width: 25rem;
+    height: 20rem;
+    border-radius: 50px;
+    margin: 0.5rem;
+    box-shadow:5px 5px 15px rgba(0, 0, 0, 1); ;
+}
+.experiencia__img:hover{
+
+}
+.experiencia__name{
+    padding-top: 10px;
+    font-size: 25px;
+}
+.experience__btn--jugar{
+    width: 80%;
+    margin-top: 2rem;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid var(--cor-de-acento--primario);
+    font-size: 20px;
+    color: var(--cor-de-acento--primario);
+    transition: 0.5s;
+    margin: 1rem;
+}
+.experience__btn--jugar:hover{
+    cursor: pointer;
+    border-color: var(--cor-de-texto-secundario);
+    color: var(--cor-de-texto-secundario) ;
+}
+.technology IMG{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+@media screen and (max-width:768px) {
+    .experiencia__imagen{
+        width: 20rem;
+        height: 15rem;
+    }
+    
+}
+@media screen and (max-width:480px) {
+    .academic__courses_box{
+        width: 15rem;
+        height: 10rem;
+        margin: 0.1rem;
+    }
+    .experiencia__title{
+        text-align: center;
+        width: 100%;
+    }
+    .experiencia{
+        padding-left: 1rem ;
+        padding-right: 1rem;
+    }
+    
+}
