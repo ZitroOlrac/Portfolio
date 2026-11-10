@@ -1279,6 +1279,9 @@ main > section {
   transform: translate(var(--ox), var(--oy)) rotate(var(--r)) scale(var(--sx), 1);
   transition: transform 0.65s cubic-bezier(0.3, 1.4, 0.5, 1);
 }
+.peek-wrap.is-placing .peek-dog {
+  transition: none;
+}
 .peek-wrap.is-in .peek-dog {
   transform: translate(0, 0) rotate(var(--r)) scale(var(--sx), 1);
 }
