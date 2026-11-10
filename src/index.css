@@ -1254,68 +1254,31 @@ p {
   }
 }
 
-/* ---------- Mascota asomándose por detrás de los marcos ---------- */
-.peek-scope {
-  isolation: isolate;
-}
-.contact__grid,
-.video--wide {
+/* ---------- Mascota que se asoma en cada sección ---------- */
+main > section {
   position: relative;
+  overflow-x: clip;
 }
-.peek {
-  position: absolute;
-  z-index: -1;
-  width: 118px;
-  height: auto;
-  pointer-events: none;
-  filter: drop-shadow(0 5px 0 rgba(20, 33, 61, 0.16));
-  translate: 0 85%;
-  transition: translate 0.6s cubic-bezier(0.3, 1.45, 0.5, 1);
-}
-.peek.is-in {
-  translate: 0 0;
-}
-.peek-scope :hover > .peek.is-in {
-  translate: 0 -10px;
-}
-.peek--services {
-  top: -72px;
-  right: 12%;
-  rotate: 8deg;
-  scale: -1 1;
-}
-.peek--video {
-  top: -70px;
-  left: 50%;
-  margin-left: -59px;
-  rotate: -4deg;
-}
-.peek--contact {
-  top: -76px;
-  right: 9%;
-  rotate: -8deg;
-}
-@media (max-width: 640px) {
-  .peek {
-    width: 92px;
-  }
-  .peek--services,
-  .peek--video,
-  .peek--contact {
-    top: -56px;
-  }
-  .peek--video {
-    margin-left: -46px;
-  }
-}
-.videos__grid.peek-scope {
+.videos__grid {
   padding-top: 3.5rem;
+  row-gap: 4.5rem;
 }
 .contact.section {
   padding-top: 5rem;
 }
-@media (max-width: 900px) {
-  .service--ai {
-    margin-top: 3.5rem;
-  }
+.peek-wrap {
+  position: absolute;
+  z-index: 3;
+  overflow: hidden;
+  pointer-events: none;
+}
+.peek-dog {
+  position: absolute;
+  max-width: none;
+  filter: drop-shadow(0 4px 0 rgba(20, 33, 61, 0.16));
+  transform: translate(var(--ox), var(--oy)) rotate(var(--r)) scale(var(--sx), 1);
+  transition: transform 0.65s cubic-bezier(0.3, 1.4, 0.5, 1);
+}
+.peek-wrap.is-in .peek-dog {
+  transform: translate(0, 0) rotate(var(--r)) scale(var(--sx), 1);
 }

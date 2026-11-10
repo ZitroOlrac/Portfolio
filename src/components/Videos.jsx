@@ -1,10 +1,9 @@
 import { useRef, useState } from 'react';
 import { videoGroups, youtubeChannel } from '../data';
-import Mascot from './Mascot';
 
 const embedUrl = (id) => `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&playsinline=1&rel=0`;
 
-const VideoCard = ({ id, title, duration, format, withMascot }) => {
+const VideoCard = ({ id, title, duration, format }) => {
   const [playing, setPlaying] = useState(false);
   const tall = format === 'tall';
 
@@ -18,7 +17,6 @@ const VideoCard = ({ id, title, duration, format, withMascot }) => {
 
   return (
     <li className={`video video--${format}`}>
-      {withMascot && <Mascot variant="peek--video" />}
       <div className="video__frame">
         {playing ? (
           <iframe
@@ -104,10 +102,10 @@ const Videos = () => {
       <div id="videos-panel" role="tabpanel" aria-labelledby={`vtab-${active}`} key={active} className="videos__panel">
         <ul
           ref={trackRef}
-          className={isCarousel ? 'videos__track' : 'container videos__grid peek-scope'}
+          className={isCarousel ? 'videos__track' : 'container videos__grid'}
         >
-          {group.videos.map((v, i) => (
-            <VideoCard key={v.id} {...v} format={group.format} withMascot={!isCarousel && i === 1} />
+          {group.videos.map((v) => (
+            <VideoCard key={v.id} {...v} format={group.format} />
           ))}
         </ul>
       </div>
