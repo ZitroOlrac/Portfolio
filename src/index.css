@@ -285,6 +285,34 @@ p {
 .nav__menu ul a:hover {
   color: var(--ink);
 }
+
+/* Tachado animado al pasar el cursor: la línea entra por la izquierda y sale por la derecha */
+@media (hover: hover) and (min-width: 861px) {
+  .nav__menu ul a {
+    position: relative;
+    display: inline-block;
+    padding-block: 0.25rem;
+  }
+  .nav__menu ul a::after {
+    content: '';
+    position: absolute;
+    left: -3px;
+    right: -3px;
+    top: 52%;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--cobalt);
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+    pointer-events: none;
+  }
+  .nav__menu ul a:hover::after,
+  .nav__menu ul a:focus-visible::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+}
 .nav__toggle {
   display: none;
   width: 44px;
