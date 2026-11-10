@@ -73,7 +73,7 @@ function place(state) {
   const maxX = tr.right - sr.left - dogW - 12;
   const x = Math.max(minX, Math.min(maxX, minX + state.fx * (maxX - minX)));
   Object.assign(wrap.style, {
-    top: `${tr.top - sr.top - wrapH}px`,
+    top: `${Math.floor(tr.top - sr.top) - wrapH}px`,
     left: `${x - pad}px`,
     right: 'auto',
     width: `${dogW + pad * 2}px`,
@@ -183,6 +183,24 @@ const PeekingDog = () => {
       state.mo.observe(section, { childList: true, subtree: true });
     });
 
+    // Mientras se ve, el perro sigue a su tarjeta si esta se mueve
+    // (imágenes que terminan de cargar, animaciones, cambios de pestaña…).
+    let follow = 0;
+    const track = () => {
+      states.forEach((s) => {
+        if (!s.visible || !s.target || typeof s.target === 'string') return;
+        const tr = s.target.getBoundingClientRect();
+        const sr = s.section.getBoundingClientRect();
+        const key = `${Math.round(tr.top - sr.top)},${Math.round(tr.left - sr.left)},${Math.round(tr.width)}`;
+        if (key !== s.key) {
+          s.key = key;
+          place(s);
+        }
+      });
+      follow = requestAnimationFrame(track);
+    };
+    follow = requestAnimationFrame(track);
+
     let frame = 0;
     const onResize = () => {
       cancelAnimationFrame(frame);
@@ -198,6 +216,7 @@ const PeekingDog = () => {
 
     return () => {
       window.removeEventListener('resize', onResize);
+      cancelAnimationFrame(follow);
       states.forEach((s) => {
         s.io.disconnect();
         s.mo.disconnect();
