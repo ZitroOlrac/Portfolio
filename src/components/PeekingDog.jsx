@@ -5,13 +5,14 @@ import { asset } from '../data';
 // Cada vez que vuelves a una sección aparece en otro marco y en otra posición.
 // - frames: marcos detrás de los que se asoma (por arriba).
 // - edge: se asoma de lado desde el borde de la pantalla.
-// - anyRow: permite marcos de cualquier fila (si no, solo la primera fila).
+// - firstRowOnly: usa solo los marcos de la primera fila.
+// Nunca se coloca donde taparía texto (ver coversText).
 const SPOTS = [
   { section: '#servicios', frames: '.service' },
   { section: '#automatizacion', edge: 'right' },
   { section: '#experiencia', edge: 'left' },
   { section: '#proyectos', frames: '.project' },
-  { section: '#videos', frames: '.video--wide .video__frame, #videos .tabs', anyRow: true },
+  { section: '#videos', frames: '.video--wide .video__frame' },
   { section: '#sobre-mi', frames: '.about__badges', edge: 'right' },
   { section: '#contacto', frames: '.contact__grid' },
 ];
@@ -27,7 +28,7 @@ function candidates(spot, section) {
   const list = [];
   if (spot.frames) {
     let frames = [...section.querySelectorAll(spot.frames)].filter((el) => el.offsetParent);
-    if (!spot.anyRow && frames.length) {
+    if (spot.firstRowOnly && frames.length) {
       const top = Math.min(...frames.map((el) => el.getBoundingClientRect().top));
       frames = frames.filter((el) => Math.abs(el.getBoundingClientRect().top - top) < 4);
     }
@@ -85,17 +86,47 @@ function place(state) {
   img.style.setProperty('--oy', `${wrapH}px`);
 }
 
+// ¿El perro taparía algún texto en esa posición?
+function coversText(section, wrap) {
+  const r = wrap.getBoundingClientRect();
+  const box = { left: r.left + 4, right: r.right - 4, top: r.top + 4, bottom: r.bottom - 4 };
+  const walker = document.createTreeWalker(section, NodeFilter.SHOW_TEXT, {
+    acceptNode: (n) =>
+      n.nodeValue.trim() && !wrap.contains(n) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT,
+  });
+  const range = document.createRange();
+  for (let n = walker.nextNode(); n; n = walker.nextNode()) {
+    range.selectNodeContents(n);
+    for (const t of range.getClientRects()) {
+      if (t.width && t.left < box.right && t.right > box.left && t.top < box.bottom && t.bottom > box.top) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
 function show(spot, state) {
   const list = candidates(spot, state.section);
-  if (!list.length) return;
-  state.target = pick(list, state.target);
-  state.fx = rand(0.1, 0.9);
-  state.fy = rand(0.2, 0.75);
-  state.tilt = rand(-10, 10);
-  state.flip = Math.random() < 0.5;
   state.wrap.classList.remove('is-in');
-  place(state);
-  requestAnimationFrame(() => requestAnimationFrame(() => state.wrap.classList.add('is-in')));
+  if (!list.length) return;
+
+  // Prueba varios marcos y posiciones hasta encontrar uno que no tape texto.
+  const previous = state.target;
+  for (let attempt = 0; attempt < 16; attempt++) {
+    state.target = pick(list, attempt < 8 ? previous : null);
+    state.fx = rand(0.1, 0.9);
+    state.fy = rand(0.2, 0.75);
+    state.tilt = rand(-10, 10);
+    state.flip = Math.random() < 0.5;
+    place(state);
+    if (!coversText(state.section, state.wrap)) {
+      requestAnimationFrame(() => requestAnimationFrame(() => state.wrap.classList.add('is-in')));
+      return;
+    }
+  }
+  // Si no hay ningún sitio libre, en esta visita no se asoma.
+  state.target = null;
 }
 
 const PeekingDog = () => {
@@ -145,7 +176,13 @@ const PeekingDog = () => {
     let frame = 0;
     const onResize = () => {
       cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(() => states.forEach((s) => s.target && s.visible && place(s)));
+      frame = requestAnimationFrame(() =>
+        states.forEach((s) => {
+          if (!s.target || !s.visible) return;
+          place(s);
+          if (coversText(s.section, s.wrap)) show(s.spot, s);
+        })
+      );
     };
     window.addEventListener('resize', onResize);
 
