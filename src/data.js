@@ -161,7 +161,7 @@ const itch = (id) => `https://img.itch.zone/${id}`;
 
 export const projects = {
   games: [
-    { title: 'Taller Twin', subtitle: 'Simulador de taller · Gestión y reparación', image: asset('assets/TallerTwin.webp'), link: 'https://zitroolrac.github.io/taller-twin/' },
+    { title: 'Taller Twin', subtitle: 'Simulador de diagnóstico de averías', image: asset('assets/TallerTwin.webp'), link: 'https://zitroolrac.github.io/taller-twin/' },
     { title: 'Bubble Boom', image: itch('aW1nLzE4MTI4MTIyLmpwZw==/original/5dXzAX.jpg'), link: 'https://sambogames.itch.io/bubble-boom' },
     { title: 'Grillas', subtitle: 'Puzzle tipo Tetris', image: itch('aW1nLzE4MTI3Mzc5LnBuZw==/original/BCXrMC.png'), link: 'https://sambogames.itch.io/tetris' },
     { title: 'MathBuffet', image: itch('aW1nLzE4MDU3NDIxLmpwZw==/original/4rlyEi.jpg'), link: 'https://sambogames.itch.io/mathclient' },
