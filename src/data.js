@@ -161,6 +161,7 @@ const itch = (id) => `https://img.itch.zone/${id}`;
 
 export const projects = {
   games: [
+    { title: 'Supervivencia Matemática', subtitle: 'Supervivencia 2D para niños: abre cajas resolviendo operaciones', image: asset('assets/SupervivenciaMatematica.webp'), link: asset('juegos/supervivencia-matematica/') },
     { title: 'Perrito Arcade', subtitle: 'Runner + duelo multijugador en tiempo real · Phaser', image: asset('assets/PerritoArcade.webp'), link: 'https://zitroolrac.github.io/perrito-arcade/' },
     { title: 'Taller Twin', subtitle: 'Simulador de diagnóstico de averías', image: asset('assets/TallerTwin.webp'), link: 'https://zitroolrac.github.io/taller-twin/' },
     { title: 'Bubble Boom', image: itch('aW1nLzE4MTI4MTIyLmpwZw==/original/5dXzAX.jpg'), link: 'https://sambogames.itch.io/bubble-boom' },
