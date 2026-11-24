@@ -176,6 +176,7 @@ export const projects = {
     { title: 'You Are Alive', image: itch('aW1nLzEwMjg1NTMwLnBuZw==/original/kBUD9%2F.png'), link: 'https://sambogames.itch.io/you-are-alive' },
   ],
   web: [
+    { title: 'Perrito Arcade', subtitle: 'Juegos web multijugador · React + Phaser · Node · PostgreSQL · Socket.IO', image: asset('assets/PerritoArcade.webp'), link: 'https://github.com/ZitroOlrac/perrito-arcade' },
     { title: 'Reservas Full-Stack', subtitle: 'Node.js + Express + SQL · React · JWT', image: asset('assets/ReservasFullstack.webp'), link: 'https://github.com/ZitroOlrac/reservas-fullstack' },
     { title: 'Gestor de tareas', subtitle: 'Angular · Signals · Drag & drop', image: asset('assets/TareasAngular.webp'), link: 'https://zitroolrac.github.io/tareas-angular/' },
     { title: 'Dashboard de gastos', subtitle: 'React + TypeScript · Recharts · CSV', image: asset('assets/DashboardGastos.webp'), link: 'https://zitroolrac.github.io/dashboard-gastos/' },
