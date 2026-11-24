@@ -161,7 +161,7 @@ const itch = (id) => `https://img.itch.zone/${id}`;
 
 export const projects = {
   games: [
-    { title: 'Perrito Arcade', subtitle: 'Runner + duelo multijugador en tiempo real · Phaser', image: asset('assets/PerritoArcade.webp'), link: 'https://github.com/ZitroOlrac/perrito-arcade' },
+    { title: 'Perrito Arcade', subtitle: 'Runner + duelo multijugador en tiempo real · Phaser', image: asset('assets/PerritoArcade.webp'), link: 'https://zitroolrac.github.io/perrito-arcade/' },
     { title: 'Taller Twin', subtitle: 'Simulador de diagnóstico de averías', image: asset('assets/TallerTwin.webp'), link: 'https://zitroolrac.github.io/taller-twin/' },
     { title: 'Bubble Boom', image: itch('aW1nLzE4MTI4MTIyLmpwZw==/original/5dXzAX.jpg'), link: 'https://sambogames.itch.io/bubble-boom' },
     { title: 'Grillas', subtitle: 'Puzzle tipo Tetris', image: itch('aW1nLzE4MTI3Mzc5LnBuZw==/original/BCXrMC.png'), link: 'https://sambogames.itch.io/tetris' },
@@ -177,7 +177,7 @@ export const projects = {
     { title: 'You Are Alive', image: itch('aW1nLzEwMjg1NTMwLnBuZw==/original/kBUD9%2F.png'), link: 'https://sambogames.itch.io/you-are-alive' },
   ],
   web: [
-    { title: 'Perrito Arcade', subtitle: 'Juegos web multijugador · React + Phaser · Node · PostgreSQL · Socket.IO', image: asset('assets/PerritoArcade.webp'), link: 'https://github.com/ZitroOlrac/perrito-arcade' },
+    { title: 'Perrito Arcade', subtitle: 'Juegos web multijugador · React + Phaser · Node · PostgreSQL · Socket.IO', image: asset('assets/PerritoArcade.webp'), link: 'https://zitroolrac.github.io/perrito-arcade/' },
     { title: 'Reservas Full-Stack', subtitle: 'Node.js + Express + SQL · React · JWT', image: asset('assets/ReservasFullstack.webp'), link: 'https://github.com/ZitroOlrac/reservas-fullstack' },
     { title: 'Gestor de tareas', subtitle: 'Angular · Signals · Drag & drop', image: asset('assets/TareasAngular.webp'), link: 'https://zitroolrac.github.io/tareas-angular/' },
     { title: 'Dashboard de gastos', subtitle: 'React + TypeScript · Recharts · CSV', image: asset('assets/DashboardGastos.webp'), link: 'https://zitroolrac.github.io/dashboard-gastos/' },
